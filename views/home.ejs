@@ -1,0 +1,109 @@
+<%- include('./base/header.ejs') %>
+
+
+  <style>
+    .required {
+      color: red;
+      font-weight: bold;
+      margin-left: 5px;
+    }
+    .form-label {
+      font-weight: 500;
+    }
+
+    body {
+      background-color: #f8f9fa;
+    }
+    .form-container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    .alert {
+      background-color: #080808;
+    }
+    .btn-custom {
+      background-color: #cc3636;
+      color: white;
+      border-radius: 50px;
+      font-size: 18px;
+      transition: background-color 0.3s ease-in-out;
+    }
+    .btn-custom:hover {
+      background-color: #ff6f00;
+    }
+    input {
+      border-radius: 50px;
+    }
+    label {
+      font-weight: bold;
+      font-size: 14px;
+      color: #495057;
+    }
+  </style>
+
+<div class="container my-5">
+    <!-- Alert Header -->
+    <div class="alert text-center py-4">
+        <h4 class="text-white mb-0">ADD NEW STUDENT</h4>
+    </div>
+
+    <!-- Form Section -->
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-10">
+            <div class="form-container">
+                <form action='/add/student' method="post">
+                    <div class="mb-4">
+                        <label for="rollNo" class="form-label">ROLL NO</label>
+                        <span class="required">*</span>
+                        <input type="text" name="rollNo" id="rollNo" class="form-control form-control-lg" placeholder="Enter Roll" aria-required="true" >
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="firstName" class="form-label">FIRST NAME</label>
+                        <span class="required">*</span>
+                        <input type="text" name="firstName" id="firstName" class="form-control form-control-lg" placeholder="Enter First Name" >
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="lastName" class="form-label">LAST NAME</label>
+                        <span class="required">*</span>
+                        <input type="text" name="lastName" id="lastName" class="form-control form-control-lg" placeholder="Enter Last Name" >
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="fatherName" class="form-label">FATHER NAME</label>
+                        <span class="required">*</span>
+                        <input type="text" name="fatherName" id="fatherName" class="form-control form-control-lg" placeholder="Enter Father's Name" >
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="aadharCard" class="form-label">AADHAR CARD</label>
+                        <span class="required">*</span>
+                        <input type="text" name="aadharCard" id="aadharCard" class="form-control form-control-lg" placeholder="Enter Aadhar Card Number" >
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="mobileNo" class="form-label">MOBILE NO</label>
+                        <span class="required">*</span>
+                        <input type="text" name="mobileNo" id="mobileNo" class="form-control form-control-lg" placeholder="Enter Mobile Number" >
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-custom btn-lg">ADD STUDENT</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<%- include('./base/footer.ejs') %>
